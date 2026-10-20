@@ -1,0 +1,144 @@
+/*
+@sable-theme
+id: hardcore-red-black
+name: Hardcore Red & Black
+author: Custom adaptation based on Pitch Black by Hannes Thöne
+kind: dark
+contrast: high
+tags: dark, oled, black, red
+fullThemeUrl: https://raw.githubusercontent.com/AnARCHIS12/sable-hardcore-red-black/main/themes/hardcore-red-black.sable.css
+*/
+
+body.sable-remote-theme {
+  /* Background */
+  --sable-bg-container: #000000;
+  --sable-bg-container-hover: #150005;
+  --sable-bg-container-active: #260009;
+  --sable-bg-container-line: #500013;
+  --sable-bg-on-container: #f5f5f5;
+  /* Surface */
+  --sable-surface-container: #080808;
+  --sable-surface-container-hover: #1a0006;
+  --sable-surface-container-active: #2a000a;
+  --sable-surface-container-line: #650016;
+  --sable-surface-on-container: #f5f5f5;
+  /* Surface Variant */
+  --sable-surface-var-container: #101010;
+  --sable-surface-var-container-hover: #200007;
+  --sable-surface-var-container-active: #35000d;
+  --sable-surface-var-container-line: #710019;
+  --sable-surface-var-on-container: #e6e6e6;
+  /* Primary */
+  --sable-primary-main: #dc0028;
+  --sable-primary-main-hover: #f00035;
+  --sable-primary-main-active: #ff284e;
+  --sable-primary-main-line: #a90022;
+  --sable-primary-on-main: #ffffff;
+  --sable-primary-container: #37000d;
+  --sable-primary-container-hover: #4a0012;
+  --sable-primary-container-active: #650019;
+  --sable-primary-container-line: #950022;
+  --sable-primary-on-container: #ffe4e9;
+  /* Secondary */
+  --sable-sec-main: #d3d3d3;
+  --sable-sec-main-hover: #e5e5e5;
+  --sable-sec-main-active: #ffffff;
+  --sable-sec-main-line: #9a9a9a;
+  --sable-sec-on-main: #080808;
+  --sable-sec-container: #1b1b1b;
+  --sable-sec-container-hover: #270008;
+  --sable-sec-container-active: #3b000e;
+  --sable-sec-container-line: #600016;
+  --sable-sec-on-container: #f4f4f4;
+  /* Success */
+  --sable-success-main: #86d8b2;
+  --sable-success-main-hover: #9ae5c4;
+  --sable-success-main-active: #b0f0d5;
+  --sable-success-main-line: #4f9e7c;
+  --sable-success-on-main: #07140d;
+  --sable-success-container: #11271c;
+  --sable-success-container-hover: #173628;
+  --sable-success-container-active: #1c4533;
+  --sable-success-container-line: #2a6349;
+  --sable-success-on-container: #d9f5e7;
+  /* Warning */
+  --sable-warn-main: #ff9a63;
+  --sable-warn-main-hover: #ffb082;
+  --sable-warn-main-active: #ffc49d;
+  --sable-warn-main-line: #b95b35;
+  --sable-warn-on-main: #170800;
+  --sable-warn-container: #3b1c0c;
+  --sable-warn-container-hover: #50230e;
+  --sable-warn-container-active: #652d11;
+  --sable-warn-container-line: #934319;
+  --sable-warn-on-container: #ffe5d6;
+  /* Critical */
+  --sable-crit-main: #ff3457;
+  --sable-crit-main-hover: #ff526f;
+  --sable-crit-main-active: #ff7189;
+  --sable-crit-main-line: #bc0029;
+  --sable-crit-on-main: #ffffff;
+  --sable-crit-container: #41000e;
+  --sable-crit-container-hover: #580012;
+  --sable-crit-container-active: #700019;
+  --sable-crit-container-line: #a00024;
+  --sable-crit-on-container: #ffe1e7;
+  /* Other */
+  --sable-focus-ring: rgba(255, 0, 51, 0.6);
+  --sable-shadow: rgba(0, 0, 0, 0.8);
+  --sable-overlay: rgba(0, 0, 0, 0.85);
+  /* Extra */
+  --pb-message-hover: #170006;
+  --pb-reaction-hover: #1b0007;
+  --pb-reaction-pressed-hover: #37000d;
+  --pb-switcher: #170006;
+  --pb-switcher-line: #640015;
+}
+
+/* Pronouns */
+body.sable-remote-theme .pronoun-pill {
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+
+/* Message Hover */
+body.sable-remote-theme article.message:hover,
+body.sable-remote-theme article.message.menu-open {
+  background-color: var(--pb-message-hover);
+}
+
+/* Composer */
+body.sable-remote-theme .composer .editor {
+  color: var(--sable-bg-on-container);
+}
+
+/* Reactions */
+body.sable-remote-theme .reactions .reaction:hover:not(:disabled, [aria-pressed='true']) {
+  background: var(--pb-reaction-hover);
+}
+
+body.sable-remote-theme .reactions .reaction[aria-pressed='true']:hover:not(:disabled) {
+  background: var(--pb-reaction-pressed-hover);
+}
+
+/* Quick Reactions */
+body.sable-remote-theme .quick-reaction {
+  background: var(--sable-sec-container);
+}
+
+body.sable-remote-theme .quick-reaction:hover {
+  background: var(--sable-sec-container-hover);
+}
+
+/* Settings Switcher */
+body.sable-remote-theme .switcher {
+  background: var(--pb-switcher);
+  box-shadow: inset 0 0 0 1px var(--pb-switcher-line);
+}
+
+body.sable-remote-theme .switcher-thumb {
+  background: var(--sable-primary-main);
+}
+
+body.sable-remote-theme .switcher-option:has(input:checked) {
+  color: var(--sable-primary-on-main);
+}
